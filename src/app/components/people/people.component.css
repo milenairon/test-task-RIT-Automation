@@ -1,0 +1,132 @@
+.element {
+  margin: 51px 0 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+  column-gap: 17px;
+  row-gap: 20px;
+}
+
+.element__card {
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+.element__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  cursor: pointer;
+  min-width: 282px;
+  min-height: 282px;
+  filter: grayscale(100%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: auto;
+}
+
+.element__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 20px 31px;
+}
+
+.element__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  max-width: 294px;
+  /*Ниже обрезаем длинный текст и вставляем многоточие*/
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* .element__box {
+  vertical-align: middle;
+  align-items: end;
+  align-self: self-end;
+  margin-left: 30px;
+}
+
+.element__button-info {
+  padding: 0;
+  border-width: 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+.element__image-info {
+  vertical-align: middle;
+  align-items: end;
+}
+*/
+.element__box-texts {
+  position: relative;
+  right: 0;
+  top: 0;
+  height: 18px;
+  min-height: 18px;
+  max-height: 100px;
+  overflow: hidden;
+}
+.element__box-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.element__text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0 8px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+/* ЭФФЕКТЫ */
+.element__card:hover .element__image {
+  filter: grayscale(0%);
+  transition: 0.5s;
+}
+
+.element__button-info:hover {
+  opacity: 0.6;
+}
+
+.element__card:hover .element__box-texts {
+  overflow: visible;
+}
+
+.element__card:hover .element__box-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  overflow: hidden;
+  transition: 0.5s;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.element__card:hover .element__text {
+  text-wrap: wrap;
+  transition: 0.5s;
+}
+
+/* ШИРИНА ЭКРАНА */
+@media screen and (max-width: 600px) {
+  .element {
+    margin: 36px 0 0;
+  }
+}

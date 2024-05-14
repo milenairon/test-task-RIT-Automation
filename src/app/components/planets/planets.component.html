@@ -1,0 +1,53 @@
+<main class="content">
+  <section class="elements">
+    <ul class="element">
+      <li *ngFor="let planet of planets" class="element__card">
+        <img
+          class="element__image"
+          src="https://gas-kvas.com/grafic/uploads/posts/2023-09/1695900988_gas-kvas-com-p-kartinki-planeti-14.jpg"
+          alt="Планеты"
+        />
+        <div class="element__container">
+          <h2 class="element__title">{{ planet.name }}</h2>
+          <div class="element__box">
+            <button type="button" class="element__button-info">
+              <img
+                class="element__image-info"
+                src="../../../assets/elementImageInfo.svg"
+                alt="Информация о планете и список всех «обитающих» там персонажей"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="element__box-texts">
+          <div class="element__box-text">
+            <p class="element__text">
+              Rotation period: <strong>{{ planet.rotation_period }}</strong>
+            </p>
+            <p class="element__text">
+              Orbital period: <strong>{{ planet.orbital_period }}</strong>
+            </p>
+            <p class="element__text">
+              Diameter: <strong>{{ planet.diameter }}</strong>
+            </p>
+            <p class="element__text">
+              Climate: <strong>{{ planet.climate }}</strong>
+            </p>
+            <p class="element__text">
+              Gravity: <strong>{{ planet.gravity }}</strong>
+            </p>
+            <p class="element__text">
+              Terrain: <strong>{{ planet.terrain }}</strong>
+            </p>
+            <p class="element__text">
+              Surface water: <strong>{{ planet.surface_water }}</strong>
+            </p>
+            <p class="element__text">
+              Population: <strong>{{ planet.population }}</strong>
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
