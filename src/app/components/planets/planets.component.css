@@ -108,6 +108,11 @@
   transition: 0.5s;
 }
 
+.element__card:hover .element__title {
+  color: #db7713;
+  transition: 0.5s;
+}
+
 .element__button-info:hover {
   opacity: 0.6;
 }
