@@ -12,14 +12,16 @@
           <div class="element__container">
             <h2 class="element__title">{{ planet.name }}</h2>
             <div class="element__box">
-              <button type="button" class="element__button-info">
-
-                <img
+              <a
+                class="element__link-info"
+                routerLink="/people"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
+                ><img
                   class="element__image-info"
                   src="../../../assets/elementImageInfo.svg"
                   alt="Информация о планете и список всех «обитающих» там персонажей"
-                />
-              </button>
+              /></a>
             </div>
           </div>
           <div class="element__box-texts">

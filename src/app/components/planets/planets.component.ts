@@ -1,24 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 import { Planet } from './planet';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-planets',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent],
+  imports: [RouterLink, CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './planets.component.html',
   styleUrl: './planets.component.css',
 })
 export class PlanetsComponent implements OnInit {
   planets: Array<Planet> = [];
-  constructor(private location: Location) {}
-
-  // navigateToPeople() {
-  //   this.location.go('/people').replace();
-  // }
+  constructor() {}
 
   ngOnInit() {
     // this.planetsService
