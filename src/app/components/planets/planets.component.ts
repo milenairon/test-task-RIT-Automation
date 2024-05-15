@@ -22,6 +22,7 @@ export class PlanetsComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getPlanets().subscribe((data: any) => {
+      // data.results - массив из планет
       this.planets = data.results.map((element: any) => {
         element.id = this.getPlanetId(element.url);
         return element;

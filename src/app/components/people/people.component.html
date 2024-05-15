@@ -2,8 +2,11 @@
   <app-header />
   <main class="content">
     <section class="elements">
+      <p *ngIf="humanList.length === 0" class="element__subtitle">
+          {{ humanZero }}
+        </p>
       <ul class="element">
-        <li *ngFor="let human of people" class="element__card">
+        <li *ngFor="let human of humanList" class="element__card">
           <img
             class="element__image"
             src="../../../assets/element__image.jpg"
@@ -55,15 +58,14 @@
         </li>
       </ul>
       <button
-    class="elements__button"
-    aria-label="Back"
-    type="button"
-    (click)="backClicked()"
-  >
-    Назад
-  </button>
+        class="elements__button"
+        aria-label="Back"
+        type="button"
+        (click)="backClicked()"
+      >
+        Назад
+      </button>
     </section>
-
   </main>
   <app-footer />
 </div>

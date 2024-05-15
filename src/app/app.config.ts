@@ -12,11 +12,15 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 // определение маршрутов
 const appRoutes: Routes = [
   { path: '', component: PlanetsComponent },
-  { path: 'planets', redirectTo: '/' },
-  { path: 'people', component: PeopleComponent },
+  { path: 'planets', component: PlanetsComponent },
+  { path: 'planets/:id', component: PeopleComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(appRoutes), provideClientHydration(), provideHttpClient()],
+  providers: [
+    provideRouter(appRoutes),
+    provideClientHydration(),
+    provideHttpClient(),
+  ],
 };
