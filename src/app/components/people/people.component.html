@@ -1,56 +1,60 @@
-<main class="content">
-  <section class="elements">
-    <ul class="element">
-      <li *ngFor="let human of people" class="element__card">
-        <img
-          class="element__image"
-          src="../../../images/element__image.jpg"
-          alt="{{ human.name }}"
-        />
-        <div class="element__container">
-          <h2 class="element__title">{{ human.name }}</h2>
-        </div>
-        <div class="element__box-texts">
-          <div class="element__box-text">
-            <p class="element__text">
-              Height: <strong>{{ human.height }}</strong>
-            </p>
-            <p class="element__text">
-              Mass: <strong>{{ human.mass }}</strong>
-            </p>
-            <p class="element__text">
-              Hair color: <strong>{{ human.hair_color }}</strong>
-            </p>
-            <p class="element__text">
-              Skin color: <strong>{{ human.skin_color }}</strong>
-            </p>
-            <p class="element__text">
-              Eye color: <strong>{{ human.eye_color }}</strong>
-            </p>
-            <p class="element__text">
-              Birth year: <strong>{{ human.birth_year }}</strong>
-            </p>
-            <p class="element__text">
-              Gender: <strong>{{ human.gender }}</strong>
-            </p>
-            <p class="element__text">
-              Homeworld: <strong>{{ human.homeworld }}</strong>
-            </p>
-            <p class="element__text">
-              Films: <strong>{{ human.films }}</strong>
-            </p>
-            <p class="element__text">
-              Species: <strong>{{ human.species }}</strong>
-            </p>
-            <p class="element__text">
-              Vehicles: <strong>{{ human.vehicles }}</strong>
-            </p>
-            <p class="element__text">
-              Starships: <strong>{{ human.starships }}</strong>
-            </p>
+<div class="page">
+  <app-header />
+  <main class="content">
+    <section class="elements">
+      <ul class="element">
+        <li *ngFor="let human of people" class="element__card">
+          <img
+            class="element__image"
+            src="../../../assets/element__image.jpg"
+            alt="{{ human.name }}"
+          />
+          <div class="element__container">
+            <h2 class="element__title">{{ human.name }}</h2>
           </div>
-        </div>
-      </li>
-    </ul>
-  </section>
-</main>
+          <div class="element__box-texts">
+            <div class="element__box-text">
+              <p class="element__text">
+                Height: <strong>{{ human.height }}</strong>
+              </p>
+              <p class="element__text">
+                Mass: <strong>{{ human.mass }}</strong>
+              </p>
+              <p class="element__text">
+                Hair color: <strong>{{ human.hair_color }}</strong>
+              </p>
+              <p class="element__text">
+                Skin color: <strong>{{ human.skin_color }}</strong>
+              </p>
+              <p class="element__text">
+                Eye color: <strong>{{ human.eye_color }}</strong>
+              </p>
+              <p class="element__text">
+                Birth year: <strong>{{ human.birth_year }}</strong>
+              </p>
+              <p class="element__text">
+                Gender: <strong>{{ human.gender }}</strong>
+              </p>
+              <p class="element__text">
+                Homeworld: <strong>{{ human.homeworld }}</strong>
+              </p>
+              <p class="element__text">
+                Films: <strong>{{ human.films }}</strong>
+              </p>
+              <p class="element__text">
+                Species: <strong>{{ human.species }}</strong>
+              </p>
+              <p class="element__text">
+                Vehicles: <strong>{{ human.vehicles }}</strong>
+              </p>
+              <p class="element__text">
+                Starships: <strong>{{ human.starships }}</strong>
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <app-footer />
+</div>

@@ -1,3 +1,12 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 45px 19px 60px;
+  box-sizing: border-box;
+}
+
 .element {
   margin: 51px 0 0;
   font-family: "Inter", Arial, Helvetica, sans-serif;

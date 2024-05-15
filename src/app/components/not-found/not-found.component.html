@@ -1,9 +1,14 @@
-<section className="not-found">
-  <div className="not-found__box">
-    <h2 className="not-found__title">404</h2>
-    <p className="not-found__text">Страница не найдена</p>
+<section class="not-found">
+  <div class="not-found__box">
+    <h2 class="not-found__title">404</h2>
+    <p class="not-found__text">Страница не найдена</p>
   </div>
-  <button className="not-found__button">
-    <a routerLink="/main" class="not-found__link">Назад</a>
+  <button
+    class="not-found__button"
+    aria-label="Back"
+    type="button"
+    (click)="backClicked()"
+  >
+    Назад
   </button>
 </section>

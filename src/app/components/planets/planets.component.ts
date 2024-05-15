@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Planet } from './planet';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-planets',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './planets.component.html',
   styleUrl: './planets.component.css',
 })
@@ -18,11 +20,6 @@ export class PlanetsComponent implements OnInit {
     // .subscribe(planet => {
     //   this.planet = planet;
     // })
-
-
-
-
-
 
     this.planets = [
       {
