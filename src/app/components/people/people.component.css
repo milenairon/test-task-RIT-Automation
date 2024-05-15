@@ -79,25 +79,6 @@
   margin: 0 auto;
 }
 
-/* .element__box {
-  vertical-align: middle;
-  align-items: end;
-  align-self: self-end;
-  margin-left: 30px;
-}
-
-.element__link-info {
-  padding: 0;
-  border-width: 0;
-  background-color: white;
-  cursor: pointer;
-}
-
-.element__image-info {
-  vertical-align: middle;
-  align-items: end;
-}
-*/
 .element__box-texts {
   position: relative;
   right: 0;

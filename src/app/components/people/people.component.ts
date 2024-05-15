@@ -5,11 +5,17 @@ import { FooterComponent } from '../footer/footer.component';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { PlanetsApiService } from '../planets/planets-api';
+import { InputRadioComponent } from '../input-radio/input-radio.component';
 
 @Component({
   selector: 'app-people',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    FooterComponent,
+    InputRadioComponent,
+  ],
   templateUrl: './people.component.html',
   styleUrl: './people.component.css',
 })

@@ -1,8 +1,9 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter, Routes } from '@angular/router';
 
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
+import { AvatarModule } from 'primeng/avatar';
 
 // компоненты, которые сопоставляются с маршрутами
 import { PlanetsComponent } from './components/planets/planets.component';
@@ -22,5 +23,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(appRoutes),
     provideClientHydration(),
     provideHttpClient(),
+    importProvidersFrom(AvatarModule),
   ],
 };
