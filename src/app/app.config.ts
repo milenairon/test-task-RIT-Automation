@@ -9,7 +9,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 // определение маршрутов
 const appRoutes: Routes = [
   { path: '', component: PlanetsComponent },
-  { path: 'planets', component: PlanetsComponent },
+  { path: 'planets', redirectTo: '/' },
   { path: 'people', component: PeopleComponent },
   { path: '**', component: NotFoundComponent },
 ];

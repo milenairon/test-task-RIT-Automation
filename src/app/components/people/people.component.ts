@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { People } from './people';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-people',
@@ -13,7 +14,12 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class PeopleComponent implements OnInit {
   people: Array<People> = [];
-  constructor() {}
+  constructor(private _location: Location) {}
+
+  backClicked() {
+    this._location.back();
+  }
+
   ngOnInit() {
     // this.peopleService
     // .getpeople()

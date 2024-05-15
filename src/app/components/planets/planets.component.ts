@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
+
 import { Planet } from './planet';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -13,7 +14,12 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class PlanetsComponent implements OnInit {
   planets: Array<Planet> = [];
-  constructor() {}
+  constructor(private location: Location) {}
+
+  // navigateToPeople() {
+  //   this.location.go('/people').replace();
+  // }
+
   ngOnInit() {
     // this.planetsService
     // .getplanets()

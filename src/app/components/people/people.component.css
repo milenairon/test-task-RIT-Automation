@@ -7,6 +7,21 @@
   box-sizing: border-box;
 }
 
+.elements {
+  display: flex;
+  flex-direction: column;
+}
+.elements__button {
+  color: #db7713;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  margin: 30px auto;
+}
+
 .element {
   margin: 51px 0 0;
   font-family: "Inter", Arial, Helvetica, sans-serif;
