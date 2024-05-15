@@ -2,10 +2,13 @@
   <app-header />
   <main class="content">
     <section class="elements">
+      <app-input-radio
+        (handleChangeGender)="handleChangeGender($event)"
+        [gender]="gender || 'all'"
+      />
       <p *ngIf="humanList.length === 0" class="element__subtitle">
         {{ humanZero }}
       </p>
-      <app-input-radio />
       <ul class="element">
         <li *ngFor="let human of humanList" class="element__card">
           <img

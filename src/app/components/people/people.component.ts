@@ -23,6 +23,7 @@ export class PeopleComponent implements OnInit {
   planet: any;
   humanList: any = [];
   humanZero: string = 'Loading...';
+  gender: string = 'all';
 
   constructor(
     private route: ActivatedRoute,
@@ -34,7 +35,7 @@ export class PeopleComponent implements OnInit {
     this._location.back();
   }
 
-  ngOnInit(): void {
+  apiFunction() {
     // Запрос на url планеты
     this.route.params.subscribe((params) => {
       this.api.getPlanet(params['id']).subscribe((planet: any) => {
@@ -49,8 +50,12 @@ export class PeopleComponent implements OnInit {
         // Запрос на url человека
         this.planet.map((id: any) => {
           this.api.getPeople(id).subscribe((human: any) => {
-            this.humanList.push(human);
-            return this.humanList;
+            if (human.gender !== this.gender) {
+              this.humanList.push(human);
+              return this.humanList;
+            } else {
+              this.humanZero = 'Никого не найдено';
+            }
           });
         });
       } else {
@@ -59,8 +64,19 @@ export class PeopleComponent implements OnInit {
     }, 500);
   }
 
+  ngOnInit(): void {
+    this.apiFunction();
+  }
+
   getPeopleId(people: any) {
     let id = people.split('/').reverse()[1];
     return id;
+  }
+
+  handleChangeGender(gender: string) {
+    this.humanZero = 'Loading...';
+    this.gender = gender;
+    this.humanList = [];
+    this.apiFunction();
   }
 }
