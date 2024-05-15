@@ -1,27 +1,50 @@
-# TestTaskRITAutomation
+# Тестовое задание. СибирьТрансАзия
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+<div align="center">
+<img src='/src/assets/Обзор-проекта.gif' alt='обзор проекта'>
+</div>
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Оглавление
 
-## Code scaffolding
+1. Описание
+2. Как запустить проект
+3. Ссылки на проект
+4. Технологии, используемые в проекте
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 1. Описание
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Проект включает фронтенд часть веб-страниц  с планетами из "Звездных Войн" и их обитателями.
 
-## Running unit tests
+Проект написан на TypeScript при помощи фреймворка Agular.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 2. Как запустить проект
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Скачайте из репозитория https://github.com/milenairon/test-task-RIT-Automation папку, нажав на кнопку Code → Download ZIP
+2. Извлеките данные из папки.
+3. Скачайте Node.js
+4. Скачайте все зависимости командой '''npm ci'''
+4. Войдите через командную строку Node.js. Введите '''npm run start'''.
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 3. Ссылка на проект
+
+- Адрес репозитория: https://github.com/milenairon/test-task-RIT-Automation
+
+- Ссылка на информацию о персонажах «звездных войн»: https://swapi.dev/
+
+---
+
+## 4. Технологии, используемые в проекте
+
+В проекте были применены технологии:
+
+- верстка на Agular;
+- вся функциональность на Agular.ts;
+- запросы на Agular.ts.
